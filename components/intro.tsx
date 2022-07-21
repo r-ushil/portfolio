@@ -85,7 +85,7 @@ export default function Intro() {
                 position="static"
                 size='md'
                 color="white"
-                bg="slategray"
+                bg="#151415"
               >
                 Github
               </Button>
@@ -96,7 +96,7 @@ export default function Intro() {
                 position="static"
                 size='md'
                 color="white"
-                bg="slategray"
+                bg="#151415"
               >
                 LinkedIn
               </Button>
@@ -108,7 +108,7 @@ export default function Intro() {
                 position="static"
                 size='md'
                 color="white"
-                bg="slategray"
+                bg="#151415"
               >
                 Email
               </Button>
