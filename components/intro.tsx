@@ -1,25 +1,16 @@
-import { Stack, Box, SlideFade, Image, Text, Heading, Link, Button } from '@chakra-ui/react'
+import { Stack, Box, SlideFade, Image, Text, Heading, Link, Button, HStack } from '@chakra-ui/react'
 import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa'
+import Emoji from './emoji'
+import TextLoop from './text-loop'
 
 export default function Intro() {
     return (
         <Stack spacing={10} justifyContent="flex-start" alignItems="flex-start">
         <SlideFade
-          //direction="top"
           in={true}
           transition={{ enter: { duration: 0.4, delay: 0.7 } }}>
           
           <Box position="relative">
-            {/* <Image
-              src="https://svgsilh.com/svg/26432.svg"
-              filter="invert(0.1)"
-              w={{ base: '70px', md: '150px' }}
-              position="absolute"
-              top={{ base: '0', md: '-15' }}
-              left={{ base: '-5', md: '-10' }}
-              zIndex={0}
-              alt=""
-            ></Image> */}
             <Text
               color="button1"
               fontSize="display2"
@@ -43,7 +34,6 @@ export default function Intro() {
         </SlideFade>
 
         <SlideFade
-          //direction="top"
           in={true}
           transition={{ enter: { duration: 0.4, delay: 0.8 } }}
         >
@@ -54,37 +44,33 @@ export default function Intro() {
             whiteSpace="pre-wrap"
             letterSpacing="-1.6px"
           >
-            <Box color="displayColor" as="span">
-              Computer Science Student
-            </Box>
-            { ' ' }
-            &amp;&amp; some other things.
+            <HStack justifyContent="flex-start" alignItems="flex-start">
+              <Box color="displayColor" as="span"> Computing Student &amp;&amp; some: </Box>
+              <TextLoop texts={["placeholder", "another placeholder"]} interval={3000}/>
+            </HStack>
+            
           </Heading>
         </SlideFade>
 
-        {/* <SlideFade
-          //direction="top"
+        <SlideFade
           in={true}
           transition={{ enter: { duration: 0.4, delay: 0.9 } }}
         >
           <Text fontSize="display3" color="textSecondary">
-            <Stack isInline spacing={1}>
-              <Box></Box>
-              <Box>
-                Some description about current company: <br />
-                <Link
+            <Emoji symbol='💻' label='laptop'/> Some description about what I'm doing at uni: {' '}
+          </Text>           
+
+          <Text fontSize="display3" color="textSecondary">
+            <Emoji symbol='🚀' label='rocket'/> Some description about current company: {' '}
+            <Link
                   isExternal
                   href={"https://www.globalpayments.com/"}
                 >
                   Global Payments
                 </Link>
-                .
-              </Box>
-            </Stack>
           </Text>
-        </SlideFade> */}
+        </SlideFade>
         <SlideFade
-          //direction="top"
           in={true}
           transition={{ enter: { duration: 0.4, delay: 1.0 } }}
         >
