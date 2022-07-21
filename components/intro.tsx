@@ -44,11 +44,14 @@ export default function Intro() {
             whiteSpace="pre-wrap"
             letterSpacing="-1.6px"
           >
-            <HStack justifyContent="flex-start" alignItems="flex-start">
-              <Box color="displayColor" as="span"> Computing Student &amp;&amp; some: </Box>
-              <TextLoop texts={["placeholder", "another placeholder"]} interval={3000}/>
+            <HStack>
+              <Box color="displayColor" as="span">Computer Science Student.</Box>
+              <Text>A developer who loves spending his time</Text>
             </HStack>
-            
+              <Box color="displayColor" as="span">
+                <TextLoop texts={["experimenting with new frameworks.", "playing cricket.", "learning instruments.", "tinkering with electronics."]} interval={3000}/>
+              </Box>
+  
           </Heading>
         </SlideFade>
 
@@ -61,13 +64,14 @@ export default function Intro() {
           </Text>           
 
           <Text fontSize="display3" color="textSecondary">
-            <Emoji symbol='🚀' label='rocket'/> Some description about current company: {' '}
+            <Emoji symbol='🚀' label='rocket'/> Some description about current company, which is {' '}
             <Link
                   isExternal
                   href={"https://www.globalpayments.com/"}
                 >
                   Global Payments
                 </Link>
+                .
           </Text>
         </SlideFade>
         <SlideFade
