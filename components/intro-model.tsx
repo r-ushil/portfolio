@@ -1,7 +1,8 @@
 import { OrbitControls } from '@react-three/drei'
 import { Canvas, useLoader } from '@react-three/fiber'
 import { Suspense } from 'react'
-import Mustang from './mustang'
+import Laptop from './models/laptop'
+import Mustang from './models/mustang'
 
 
 
@@ -12,10 +13,12 @@ export default function IntroScene() {
             <Canvas camera={{ fov: 45, position: [4, 4, 6] }}>
                 <ambientLight intensity={0.1} />
                 <pointLight position={[0, 10, 0]} intensity={1} />
+                <pointLight position={[0, -10, 0]} intensity={0.6} />
                 <pointLight position={[10, 0, 0]} intensity={1} />
-                <pointLight position={[0, 0, 10]} intensity={1} />
+                <pointLight position={[-10, 0, 0]} intensity={1} />
 
-                <Mustang/>
+
+                <Laptop/>
                 <OrbitControls />
             </Canvas>
         </div>
