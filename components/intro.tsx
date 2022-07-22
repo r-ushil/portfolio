@@ -44,9 +44,9 @@ export default function Intro() {
             whiteSpace="pre-wrap"
             letterSpacing="-1.6px"
           >
-              <Box color="displayColor" as="span">Computer Science Student. </Box>
-              An aspiring full-stack developer who loves spending his time<br/>
-              <TextLoop texts={["experimenting with new frameworks.", "playing cricket.", "learning instruments.", "tinkering with electronics."]} interval={3000}/>
+              <Box color="displayColor" as="span">Computing Student. </Box>
+              An aspiring developer who loves{'\n'}spending his time{' '}
+              <TextLoop texts={["experimenting with frameworks.", "playing cricket.", "learning instruments.", "tinkering with electronics."]} interval={3000}/>
              
   
           </Heading>

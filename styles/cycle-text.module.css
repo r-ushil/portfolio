@@ -1,7 +1,8 @@
 .cycle_text {
     color: #3CCF91;
-    position: relative;
+    position: absolute;
     vertical-align: middle;
+    margin-top: 0.15px;
   }
   
 .cycle_text::before {
@@ -10,7 +11,7 @@
     height: 2px;
     background: #6d6de6;
     position: absolute;
-    bottom: -12px;
+    bottom: 0px;
     z-index: -1;
     opacity: 1;
     animation: fill-in 3s cubic-bezier(0.76, 0, 0.24, 1) infinite;
