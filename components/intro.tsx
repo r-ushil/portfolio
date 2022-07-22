@@ -18,7 +18,7 @@ export default function Intro() {
               position="relative"
               zIndex={1}
             >
-              Hey there!, I'm-
+              Hey there, I'm-
             </Text>
           </Box>
           <Heading
@@ -44,13 +44,10 @@ export default function Intro() {
             whiteSpace="pre-wrap"
             letterSpacing="-1.6px"
           >
-            <HStack>
-              <Box color="displayColor" as="span">Computer Science Student.</Box>
-              <Text>A developer who loves spending his time</Text>
-            </HStack>
-              <Box color="displayColor" as="span">
-                <TextLoop texts={["experimenting with new frameworks.", "playing cricket.", "learning instruments.", "tinkering with electronics."]} interval={3000}/>
-              </Box>
+              <Box color="displayColor" as="span">Computer Science Student. </Box>
+              A full-stack developer who loves spending his time<br/>
+              <TextLoop texts={["experimenting with new frameworks.", "playing cricket.", "learning instruments.", "tinkering with electronics."]} interval={3000}/>
+             
   
           </Heading>
         </SlideFade>

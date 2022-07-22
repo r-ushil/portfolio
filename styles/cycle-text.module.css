@@ -10,7 +10,7 @@
     height: 2px;
     background: #6d6de6;
     position: absolute;
-    bottom: -10px;
+    bottom: -12px;
     z-index: -1;
     opacity: 1;
     animation: fill-in 3s cubic-bezier(0.76, 0, 0.24, 1) infinite;
