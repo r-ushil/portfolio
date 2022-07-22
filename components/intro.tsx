@@ -45,7 +45,7 @@ export default function Intro() {
             letterSpacing="-1.6px"
           >
               <Box color="displayColor" as="span">Computer Science Student. </Box>
-              A full-stack developer who loves spending his time<br/>
+              An aspiring full-stack developer who loves spending his time<br/>
               <TextLoop texts={["experimenting with new frameworks.", "playing cricket.", "learning instruments.", "tinkering with electronics."]} interval={3000}/>
              
   
