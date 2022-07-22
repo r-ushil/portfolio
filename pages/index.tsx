@@ -15,7 +15,7 @@ const Home: NextPage = () => {
               px={{ base: '5vw', md: '7.5vw' }}
               mt={{ base: '15vh', md: '22.5vh' }}
             >
-            <HStack justifyContent="center" alignItems="flex-start">
+            <HStack spacing="100px" justifyContent="center" alignItems="flex-start">
               <Intro />
               <IntroScene />
             </HStack>
