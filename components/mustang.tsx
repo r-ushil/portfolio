@@ -3,6 +3,7 @@ import * as THREE from 'three'
 import React, { useRef  } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from "three-stdlib"
+import { useFrame } from '@react-three/fiber'
         
 type GLTFResult = GLTF & {
     nodes: {
@@ -37,6 +38,8 @@ type GLTFResult = GLTF & {
 export default function Model({ ...props }: JSX.IntrinsicElements['group']) {
     const group = useRef<THREE.Group>()
     const { nodes, materials } = useGLTF('/models/Mustang.glb') as GLTFResult
+    useFrame(() => (group.current.rotation.y += 0.01));
+
     return (
             <group ref={group} {...props} dispose={null}>
             <mesh castShadow receiveShadow geometry={nodes.Cube.geometry} material={materials.Calip}   />
