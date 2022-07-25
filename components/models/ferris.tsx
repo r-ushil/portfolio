@@ -25,7 +25,7 @@ export default function Ferris({ ...props }: JSX.IntrinsicElements["group"]) {
         <group ref={group} {...props} dispose={null}>
             <group
                 position={[0, 1.5, 0]}
-                rotation={[-Math.PI, 0, -Math.PI]}
+                rotation={[-Math.PI, -Math.PI - 0.6, -Math.PI]}
                 scale={6}
             >
                 <mesh
