@@ -3,7 +3,6 @@ import {
     Heading,
     Image,
     Flex,
-    Box,
     chakra,
     Popover,
     PopoverTrigger,
@@ -13,8 +12,6 @@ import {
     VStack,
     HStack,
   } from '@chakra-ui/react'
-
-  import styles from "../styles/cycle-text.module.css";
 
 
   interface MoreInfoProps {
@@ -52,40 +49,36 @@ import {
   
     return (
       <>
-
-      <HStack spacing="200px" justifyContent="center" alignItems="flex-start">
-
-            
-
-            <VStack spacing={4}>
-                
-              <Heading color={"displayColor"}>
-                    About Me ⚡                
-              </Heading>
-              <Text
-                fontSize="display3" color="textSecondary"
-              >
-            
-                Hey! I'm Rushil Patel, and this is some text about{' '}
-                Other stuff! 🏀 blahblahblah aksdhalksfhsdkla ajsdfhaksjdfh askjfh aisdj ajshdaj jdhajdha jdhajdhj 
-              </Text>
-            </VStack>
-
-            <Flex alignItems="center" justifyContent="center" position="relative">
-              <div style={{ width: "30vw", height: "60vh" }}>
+      <VStack spacing={4} justifyContent="left" alignItems="flex-start">
+        <Heading color={"displayColor"}>
+          About Me ⚡                
+        </Heading>
+        <HStack spacing="200px" justifyContent="center" alignItems="flex-start">
+          
+          <VStack spacing={4} justifyContent="left" alignItems="flex-start">
+            <Text
+              fontSize="display3" color="textSecondary">
               
-                <Image
+                  Hey! I'm Rushil Patel, and this is some text about{' '}
+                  Other stuff! 🏀 blahblahblah aksdhalksfhsdkla ajsdfhaksjdfh askjfh aisdj ajshdaj jdhajdha jdhajdhj 
+            
+            </Text>
+          </VStack>
+
+          <Flex alignItems="center" justifyContent="center" position="relative">
+            <div style={{ width: "30vw", height: "60vh" }}>
+              <Image
                   src="/me-3.png"
                   w="100%"
                   maxW={{ base: '400px', lg: '450px' }}
                   maxH={{ base: '400px', lg: '450px' }}
                   alt="Rushil Patel"
-                />
-                
-              </div>
-            </Flex>
-            
-        </HStack>
+                />        
+            </div>
+          </Flex>
+              
+          </HStack>
+        </VStack>
       </>
     )
   }
