@@ -20,8 +20,7 @@ const Home: NextPage = () => {
               <Intro />
               <IntroScene />
             </HStack>
-            <br/>
-            <br/>
+            
             <AboutMe />
 
             </Stack>
