@@ -13,11 +13,11 @@ import {
 } from 'react-icons/si'
 
 export enum ProjectTags {
-    REACT,
-    NODE,
-    TYPESCRIPT,
-    RUST,
-    NEXT,
+    REACT = 'React',
+    NODE = 'Node JS',
+    TYPESCRIPT = 'TypeScript',
+    RUST = 'Rust',
+    NEXT = 'Next JS',
 }
 
 interface tagInfo {
