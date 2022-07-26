@@ -11,6 +11,10 @@ import React, { useEffect, useState } from 'react'
 import AboutMeCanvas from './about-me-canvas'
 import Laptop from './models/laptop'
 import Ferris from './models/ferris'
+import Emoji from './emoji'
+import Piano from './models/piano'
+import GoPro from './models/gopro'
+import Capacitor from './models/capacitor'
 
 export default function AboutMe() {
 
@@ -42,15 +46,29 @@ export default function AboutMe() {
                 Rushil Patel
               </Link>
 
-              , and this is some text about{' '}
-              Other stuff! 🏀  askjfh aisdj ajshdaj jdhajdha jdhajdhj{' '}
-              <Link fontSize="display3" color="#3CCF91" onClick={() => { setModelSrc(<Laptop />) }}>
-                click
-              </Link>
+              {' '}and I'm an aspiring full-stack developer based in Crawley, West Sussex. I'm currently studying Computing at Imperial College London {' '}
+              <Emoji symbol='🎓' label='uni-hat'/>
+              <br/><br/>
 
-              {' '}blahblahblah aksdhalksfhsdkla ajsdfhaksjdfh, and also, my favourite programming language is {' '}
+
+              {' '} I've had the priviledge of working with both a {' '}
+              <Link isExternal href={"https://cub3.com/"}> start-up </Link>
+              and a {' '}
+              <Link isExternal href={"https://www.globalpayments.com/"}> large corporation</Link>
+              , allowing me to explore the Web3 and Payments industries respectively.
+              <br/><br/>
+
+              {' '} In my spare time, I love playing instruments, particularly the{' '}
+              <Link fontSize="display3" color="#3CCF91" onClick={() => { setModelSrc(<Piano/>) }}> piano</Link>
+              . I also enjoy playing league and university cricket, as well as{' '}
+              <Link fontSize="display3" color="#3CCF91" onClick={() => { setModelSrc(<GoPro/>) }}> videography </Link>
+              and tinkering with fun electronics projects on the side!
+              <br/><br/>
+
+
+              {' '}Also, my favourite programming language is {' '}
               <Link fontSize="display3" color="#3CCF91" onClick={() => { setModelSrc(<Ferris />) }}>
-                Rust
+                Rust.
               </Link>
 
 
