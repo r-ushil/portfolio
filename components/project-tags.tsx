@@ -20,10 +20,6 @@ export enum ProjectTags {
     NEXT,
 }
 
-interface getTagsProps {
-    tags: ProjectTags[]
-}
-
 interface tagInfo {
     color: string,
     icon: IconType
@@ -39,7 +35,7 @@ function getTagInfo(tag: ProjectTags) {
     }
 }
 
-export default function getTags({tags}: getTagsProps) {
+export function getTags(tags: ProjectTags[]) {
 
     const tagsAsJsx = tags.map((item) => {
       const tagInfo = getTagInfo(item);
