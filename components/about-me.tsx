@@ -5,18 +5,12 @@ import {
   VStack,
   HStack,
   Button,
+  Link,
 } from '@chakra-ui/react'
 import React, { useEffect, useState } from 'react'
 import AboutMeCanvas from './about-me-canvas'
 import Laptop from './models/laptop'
 import Ferris from './models/ferris'
-
-
-
-interface MoreInfoProps {
-  text: string,
-  model_src?: string,
-}
 
 export default function AboutMe() {
 
@@ -44,20 +38,20 @@ export default function AboutMe() {
               fontSize="display3" color="textSecondary">
 
               Hey! I'm {' '}
-              <Button fontSize="display3" color="#3CCF91" variant='link' onClick={() => { setModelSrc(null) }}>
+              <Link fontSize="display3" color="#3CCF91" onClick={() => { setModelSrc(null) }}>
                 Rushil Patel
-              </Button>
+              </Link>
 
               , and this is some text about{' '}
               Other stuff! 🏀  askjfh aisdj ajshdaj jdhajdha jdhajdhj{' '}
-              <Button fontSize="display3" color="#3CCF91" variant='link' onClick={() => { setModelSrc(<Laptop />) }}>
+              <Link fontSize="display3" color="#3CCF91" onClick={() => { setModelSrc(<Laptop />) }}>
                 click
-              </Button>
+              </Link>
 
               {' '}blahblahblah aksdhalksfhsdkla ajsdfhaksjdfh, and also, my favourite programming language is {' '}
-              <Button fontSize="display3" color="#3CCF91" variant='link' onClick={() => { setModelSrc(<Ferris />) }}>
+              <Link fontSize="display3" color="#3CCF91" onClick={() => { setModelSrc(<Ferris />) }}>
                 Rust
-              </Button>
+              </Link>
 
 
             </Text>
