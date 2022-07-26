@@ -57,11 +57,17 @@ export default function Intro() {
           transition={{ enter: { duration: 0.4, delay: 0.9 } }}
         >
           <Text fontSize="display3" color="textSecondary">
-            <Emoji symbol='💻' label='laptop'/> Some description about what I'm doing at uni: {' '}
+            <Emoji symbol='💻' label='laptop'/> Year 3 MEng Computing Student at {' '}
+            <Link
+                  isExternal
+                  href={"https://www.imperial.ac.uk/"}
+                >
+                  Imperial College London
+                </Link>
           </Text>           
 
           <Text fontSize="display3" color="textSecondary">
-            <Emoji symbol='🚀' label='rocket'/> Some description about current company, which is {' '}
+            <Emoji symbol='🚀' label='rocket'/> Enterprise Architecture Intern at {' '}
             <Link
                   isExternal
                   href={"https://www.globalpayments.com/"}
