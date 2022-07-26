@@ -39,8 +39,7 @@ export default function AboutMe() {
         <HStack spacing="200px" justifyContent="center" alignItems="flex-start">
 
           <VStack spacing={4} justifyContent="left" alignItems="flex-start">
-            <Text
-              fontSize="display3" color="textSecondary">
+            <Text fontSize="display3" color="textSecondary">
 
               Hey! I'm {' '}
               <Link fontSize="display3" color="#3CCF91" onClick={() => { setModelSrc(null) }}>
@@ -48,8 +47,8 @@ export default function AboutMe() {
               </Link>
 
               {' '}and I'm an aspiring full-stack developer based in Crawley, West Sussex. I'm currently studying Computing at Imperial College London {' '}
-              <Emoji symbol='🎓' label='uni-hat'/>
-              <br/><br/>
+              <Emoji symbol='🎓' label='uni-hat' />
+              <br /><br />
 
 
               {' '} I've had the priviledge of working with both a {' '}
@@ -57,57 +56,59 @@ export default function AboutMe() {
               and a {' '}
               <Link isExternal href={"https://www.globalpayments.com/"}> large corporation</Link>
               , allowing me to explore the Web3 and Payments industries respectively.
-              <br/><br/>
+              <br /><br />
 
               {' '} In my spare time, I love playing instruments and making travel
-              <Link fontSize="display3" color="#3CCF91" onClick={() => { setModelSrc(<GoPro/>) }}> videos</Link>
+              <Link fontSize="display3" color="#3CCF91" onClick={() => { setModelSrc(<GoPro />) }}> videos</Link>
               . I also enjoy playing league and university cricket and tinkering with fun electronics projects on the side!
-              <br/><br/>
+              <br /><br />
 
               Here are some of the tech frameworks and languages I've experimented with recently:
-              <br/><br/>
+              <br /><br />
+            </Text>
+            <SimpleGrid columns={2}>
 
-              <SimpleGrid columns={2}>
               <List spacing={2}>
-                <ListItem>
+                <ListItem fontSize="display3" color="textSecondary">
                   <ListIcon as={ChevronRightIcon} color='#3CCF91' />
                   Next.js / React
                 </ListItem>
-                <ListItem>
+                <ListItem fontSize="display3" color="textSecondary">
                   <ListIcon as={ChevronRightIcon} color='#3CCF91' />
                   Typescript
                 </ListItem>
-                <ListItem>
+                <ListItem fontSize="display3" color="textSecondary">
                   <ListIcon as={ChevronRightIcon} color='#3CCF91' />
                   C
                 </ListItem>
-                <ListItem>
+                <ListItem fontSize="display3" color="textSecondary">
                   <ListIcon as={ChevronRightIcon} color='#3CCF91' />
                   gRPC / protobuf
                 </ListItem>
-                <ListItem>
+                <ListItem fontSize="display3" color="textSecondary">
                   <ListIcon as={ChevronRightIcon} color='#3CCF91' />
                   Prisma
                 </ListItem>
-            </List>
-            <List spacing={2}>
-                <ListItem>
+              </List>
+
+              <List spacing={2} as='span'>
+                <ListItem fontSize="display3" color="textSecondary">
                   <ListIcon as={ChevronRightIcon} color='#3CCF91' />
                   Terraform
                 </ListItem>
-                <ListItem>
+                <ListItem fontSize="display3" color="textSecondary">
                   <ListIcon as={ChevronRightIcon} color='#3CCF91' />
                   Node / Express.js
                 </ListItem>
-                <ListItem>
+                <ListItem fontSize="display3" color="textSecondary">
                   <ListIcon as={ChevronRightIcon} color='#3CCF91' />
                   Firebase
                 </ListItem>
-                <ListItem>
+                <ListItem fontSize="display3" color="textSecondary">
                   <ListIcon as={ChevronRightIcon} color='#3CCF91' />
                   Docker
                 </ListItem>
-                <ListItem>
+                <ListItem fontSize="display3" color="textSecondary">
                   <ListIcon as={ChevronRightIcon} color='#3CCF91' />
                   Rust (
                   <Link fontSize="display3" color="#3CCF91" onClick={() => { setModelSrc(<Ferris />) }}>
@@ -115,13 +116,9 @@ export default function AboutMe() {
                   </Link>
                   ).
                 </ListItem>
-            </List>
-              </SimpleGrid>
+              </List>
+            </SimpleGrid>
 
-              
-
-
-            </Text>
           </VStack>
 
           <Flex alignItems="center" justifyContent="center" position="relative">
