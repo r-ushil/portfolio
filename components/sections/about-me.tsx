@@ -12,10 +12,10 @@ import {
 } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import React, { useEffect, useState } from 'react'
-import AboutMeCanvas from './about-me-canvas'
-import Ferris from './models/ferris'
-import Emoji from './emoji'
-import GoPro from './models/gopro'
+import AboutMeCanvas from '../about-me-canvas'
+import Ferris from '../models/ferris'
+import Emoji from '../emoji'
+import GoPro from '../models/gopro'
 
 export default function AboutMe() {
 

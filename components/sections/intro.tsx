@@ -1,7 +1,7 @@
 import { Stack, Box, SlideFade, Image, Text, Heading, Link, Button, HStack } from '@chakra-ui/react'
 import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa'
-import Emoji from './emoji'
-import TextLoop from './text-loop'
+import Emoji from '../emoji'
+import TextLoop from '../text-loop'
 
 export default function Intro() {
     return (

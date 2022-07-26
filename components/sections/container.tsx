@@ -1,6 +1,6 @@
 import React from 'react'
 import { chakra, Flex, Stack, Text } from '@chakra-ui/react'
-import Navbar from '../components/navbar'
+import Navbar from '../navbar'
 
 
 interface Props {
