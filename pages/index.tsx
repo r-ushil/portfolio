@@ -1,8 +1,8 @@
 import { HStack, Stack } from '@chakra-ui/react'
 import type { NextPage } from 'next'
-import AboutMe from '../components/about-me'
-import Container from '../components/container'
-import Intro from '../components/intro'
+import AboutMe from '../components/sections/about-me'
+import Container from '../components/sections/container'
+import Intro from '../components/sections/intro'
 import IntroScene from '../components/intro-model'
 
 const Home: NextPage = () => {
