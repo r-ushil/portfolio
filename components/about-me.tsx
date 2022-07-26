@@ -4,17 +4,18 @@ import {
   Flex,
   VStack,
   HStack,
-  Button,
   Link,
+  SimpleGrid,
+  List,
+  ListItem,
+  ListIcon,
 } from '@chakra-ui/react'
+import { ChevronRightIcon } from '@chakra-ui/icons'
 import React, { useEffect, useState } from 'react'
 import AboutMeCanvas from './about-me-canvas'
-import Laptop from './models/laptop'
 import Ferris from './models/ferris'
 import Emoji from './emoji'
-import Piano from './models/piano'
 import GoPro from './models/gopro'
-import Capacitor from './models/capacitor'
 
 export default function AboutMe() {
 
@@ -58,18 +59,66 @@ export default function AboutMe() {
               , allowing me to explore the Web3 and Payments industries respectively.
               <br/><br/>
 
-              {' '} In my spare time, I love playing instruments, particularly the{' '}
-              <Link fontSize="display3" color="#3CCF91" onClick={() => { setModelSrc(<Piano/>) }}> piano</Link>
-              . I also enjoy playing league and university cricket, as well as{' '}
-              <Link fontSize="display3" color="#3CCF91" onClick={() => { setModelSrc(<GoPro/>) }}> videography </Link>
-              and tinkering with fun electronics projects on the side!
+              {' '} In my spare time, I love playing instruments and making travel
+              <Link fontSize="display3" color="#3CCF91" onClick={() => { setModelSrc(<GoPro/>) }}> videos</Link>
+              . I also enjoy playing league and university cricket and tinkering with fun electronics projects on the side!
               <br/><br/>
 
+              Here are some of the tech frameworks and languages I've experimented with recently:
+              <br/><br/>
 
-              {' '}Also, my favourite programming language is {' '}
-              <Link fontSize="display3" color="#3CCF91" onClick={() => { setModelSrc(<Ferris />) }}>
-                Rust.
-              </Link>
+              <SimpleGrid columns={2}>
+              <List spacing={2}>
+                <ListItem>
+                  <ListIcon as={ChevronRightIcon} color='#3CCF91' />
+                  Next.js / React
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={ChevronRightIcon} color='#3CCF91' />
+                  Typescript
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={ChevronRightIcon} color='#3CCF91' />
+                  C
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={ChevronRightIcon} color='#3CCF91' />
+                  gRPC / protobuf
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={ChevronRightIcon} color='#3CCF91' />
+                  Prisma
+                </ListItem>
+            </List>
+            <List spacing={2}>
+                <ListItem>
+                  <ListIcon as={ChevronRightIcon} color='#3CCF91' />
+                  Terraform
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={ChevronRightIcon} color='#3CCF91' />
+                  Node / Express.js
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={ChevronRightIcon} color='#3CCF91' />
+                  Firebase
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={ChevronRightIcon} color='#3CCF91' />
+                  Docker
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={ChevronRightIcon} color='#3CCF91' />
+                  Rust (
+                  <Link fontSize="display3" color="#3CCF91" onClick={() => { setModelSrc(<Ferris />) }}>
+                    my current favourite
+                  </Link>
+                  ).
+                </ListItem>
+            </List>
+              </SimpleGrid>
+
+              
 
 
             </Text>
