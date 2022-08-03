@@ -36,9 +36,9 @@ type GLTFResult = GLTF & {
 
 
 export default function Model({ ...props }: JSX.IntrinsicElements['group']) {
-    const group = useRef<THREE.Group>()
+    const group = useRef<THREE.Group>(null)
     const { nodes, materials } = useGLTF('/models/Mustang.glb') as GLTFResult
-    useFrame(() => (group.current.rotation.y += 0.01));
+    useFrame(() => (group!.current!.rotation.y += 0.01));
 
     return (
             <group ref={group} {...props} dispose={null}>

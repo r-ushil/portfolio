@@ -14,9 +14,9 @@ type GLTFResult = GLTF & {
 };
 
 export default function Laptop({ ...props }: JSX.IntrinsicElements["group"]) {
-  const group = useRef<THREE.Group>();
+  const group = useRef<THREE.Group>(null);
   const { nodes, materials } = useGLTF("/models/laptop.glb") as GLTFResult;
-  useFrame(() => (group.current.rotation.y += 0.002));
+  useFrame(() => (group!.current!.rotation.y += 0.002));
   return (
     <group ref={group} {...props} dispose={null}>
       <mesh
