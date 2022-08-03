@@ -1,58 +1,73 @@
 import {
-    Text,
-    Stack,
-    Divider,
-    Link,
-    ScaleFade,
-    Image,
-  } from '@chakra-ui/react'
-  import {
-    FaGithub,
-    FaExternalLinkAlt,
-  } from 'react-icons/fa'
+  Text,
+  Link,
+  Image,
+  Heading,
+  Flex,
+  Box,
+  chakra,
+  Stack,
+} from '@chakra-ui/react'
+import {
+  FaGithub,
+  FaExternalLinkAlt,
+} from 'react-icons/fa'
 
 
-  interface ProjectCardProps {
-    imageSrc: string,
-    title: string,
-    desc: string,
-    githubLink: string,
-    deployLink: string,
-    tags: React.ReactNode[],
-  }
-  
-  export default function ProjectCard({
-    imageSrc,
-    title,
-    desc,
-    githubLink,
-    deployLink,
-    tags,
-  } : ProjectCardProps) {
+interface ProjectCardProps {
+  imageSrc: string,
+  title: string,
+  desc: string,
+  githubLink: string,
+  deployLink: string,
+  tags: React.ReactNode[],
+}
 
-    return (
-      <Stack
-        bg="secondary"
-        borderRadius="10px"
-        minH="320px"
-        maxH="500px"
-        border="1px"
-        borderColor={{ base: '#333', md: 'borderColor' }}
+export default function ProjectCard({
+  imageSrc,
+  title,
+  desc,
+  githubLink,
+  deployLink,
+  tags,
+}: ProjectCardProps) {
+
+  return (
+    <Flex
+      p={50}
+      w="full"
+      alignItems="center"
+      justifyContent="center"
+    >
+      <Box
+        mx="auto"
+        rounded="lg"
+        shadow="md"
+        bg="gray.800"
+        maxW="2xl"
       >
-        <ScaleFade in={true}>
-          <Image
-            width={1250}
-            height={600}
-            w="auto"
-            h="auto"
-            src={imageSrc}
-            alt="project image"
-          ></Image>
-          <Stack px={4} py={2}>
+        <Image
+          roundedTop="lg"
+          w="full"
+          h={64}
+          fit="cover"
+          src={imageSrc}
+        />
+
+        <Box p={6}>
+          <Box>
             <Stack isInline justifyContent="space-between" alignItems="center">
-              <Text fontFamily="Ubuntu" fontSize="2xl" color="displayColor">
+              <Text
+                display="block"
+                color="displayColor"
+                fontWeight="bold"
+                fontSize="2xl"
+                mt={2}
+                _hover={{ color: "gray.600", textDecor: "underline" }}
+              >
                 {title}
               </Text>
+
               <Stack
                 isInline
                 justifyContent="flex-end"
@@ -79,13 +94,22 @@ import {
                 )}
               </Stack>
             </Stack>
-            <Stack isInline>{tags}</Stack>
-            <Divider />
-            <Text color="textSecondary" fontSize={['sm', 'md']}>
+
+            <chakra.p
+              mt={2}
+              fontSize="md"
+              color="gray.600"
+            >
               {desc}
-            </Text>
-          </Stack>
-        </ScaleFade>
-      </Stack>
-    )
-  }
+            </chakra.p>
+          </Box>
+          <br/>
+          <Box>
+          <Stack isInline>{tags}</Stack>
+          </Box>
+        </Box>
+      </Box>
+    </Flex>
+  );
+}
+
