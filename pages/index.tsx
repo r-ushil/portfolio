@@ -4,6 +4,7 @@ import AboutMe from '../components/sections/about-me'
 import Container from '../components/sections/container'
 import Intro from '../components/sections/intro'
 import IntroScene from '../components/intro-model'
+import Projects from '../components/sections/projects'
 
 const Home: NextPage = () => {
   return (
@@ -22,7 +23,8 @@ const Home: NextPage = () => {
             </HStack>
             
             <AboutMe />
-
+            
+            <Projects />
             </Stack>
       </Container>
   )
