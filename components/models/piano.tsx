@@ -32,9 +32,9 @@ type GLTFResult = GLTF & {
 };
 
 export default function Piano({ ...props }: JSX.IntrinsicElements["group"]) {
-  const group = useRef<THREE.Group>();
+  const group = useRef<THREE.Group>(null);
   const { nodes, materials } = useGLTF("/models/piano.glb") as GLTFResult;
-  useFrame(() => (group.current.rotation.y += 0.002));
+  useFrame(() => (group!.current!.rotation.y += 0.002));
   return (
     <group ref={group} {...props} dispose={null} position={[0, 1.8, 0]} rotation={[-Math.PI + 0.6, -Math.PI, -Math.PI]} scale={0.9}>
       <mesh

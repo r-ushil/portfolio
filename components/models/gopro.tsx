@@ -38,9 +38,9 @@ type GLTFResult = GLTF & {
 };
 
 export default function GoPro({ ...props }: JSX.IntrinsicElements["group"]) {
-  const group = useRef<THREE.Group>();
+  const group = useRef<THREE.Group>(null);
   const { nodes, materials } = useGLTF("/models/gopro.glb") as GLTFResult;
-  useFrame(() => (group.current.rotation.y += 0.002));
+  useFrame(() => (group!.current!.rotation.y += 0.002));
 
   return (
     <group ref={group} {...props} dispose={null}>
