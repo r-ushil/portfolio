@@ -21,12 +21,12 @@ export default function Projects() {
         </Heading>
 
         <Text fontSize="display3" color="textSecondary">
-          Here are some of the projects I've worked on.
+          Work in Progress - Coming Soon!
         </Text>
 
       </VStack>
 
-      <Box>
+      {/* <Box>
         <SimpleGrid columns={2} spacing={150} justifyContent="center" alignItems="flex-start">
 
           <ProjectCard
@@ -57,7 +57,7 @@ export default function Projects() {
             }
           />
         </SimpleGrid>
-      </Box>
+      </Box> */}
     </>
   )
 }
