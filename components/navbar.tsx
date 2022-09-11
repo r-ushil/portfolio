@@ -16,7 +16,7 @@ export default function Navbar() {
   `
 
   return (
-    <Box zIndex="99">
+    <Box>
       <Slide
         direction="top"
         in={true}
