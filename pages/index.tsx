@@ -1,4 +1,4 @@
-import { HStack, Stack } from '@chakra-ui/react'
+import { Wrap, Stack } from '@chakra-ui/react'
 import type { NextPage } from 'next'
 import AboutMe from '../components/sections/about-me'
 import Container from '../components/sections/container'
@@ -17,10 +17,10 @@ const Home: NextPage = () => {
               px={{ base: '5vw', md: '7.5vw' }}
               mt={{ base: '17.5vh', md: '22.5vh' }}
             >
-            <HStack spacing="100px" justifyContent="center" alignItems="flex-start">
+            <Wrap spacing="100px" justifyContent="center" alignItems="flex-start">
               <Intro />
               <IntroScene />
-            </HStack>
+            </Wrap>
             
             <AboutMe />
             
