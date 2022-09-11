@@ -1,5 +1,5 @@
 import React from 'react'
-import { Fade, Image } from '@chakra-ui/react'
+import { Fade, Image, Box } from '@chakra-ui/react'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 
@@ -13,7 +13,7 @@ export default function AboutMeCanvas(props: AboutModelProps) {
 
         return (
             <Fade in={true}>
-                <div style={{ width: "30vw", height: "60vh" }}>
+                <Box w={['65vw', '30vw']} h={['50vh', '60vh']}>
                     <Canvas camera={{ fov: 45, position: [4, 4, 6] }}>
                         <ambientLight intensity={0.1} />
                         <pointLight position={[0, 10, 0]} intensity={1} />
@@ -24,21 +24,21 @@ export default function AboutMeCanvas(props: AboutModelProps) {
                         {props.src}
                         <OrbitControls />
                     </Canvas>
-                </div>
+                </Box>
             </Fade>
         )
 
     } else {
         return (
-            <div style={{ width: "30vw", height: "60vh" }}>
+            <Box w={['65vw', '30vw']} h={['50vh', '60vh']}>
                 <Image
                     src="/me-3.png"
                     w="100%"
-                    maxW={{ base: '400px', lg: '450px' }}
-                    maxH={{ base: '400px', lg: '450px' }}
+                    maxW={{ base: '400px', lg: '450px', sm: '65vw' }}
+                    maxH={{ base: '400px', lg: '450px', sm: '50vh' }}
                     alt="Rushil Patel"
                 />
-            </div>
+            </Box>
         )
     }
 
