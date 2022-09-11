@@ -16,7 +16,6 @@ export default function Intro() {
               fontSize="display2"
               fontWeight="medium"
               position="relative"
-              zIndex={1}
             >
               Hey there, I'm-
             </Text>
@@ -27,7 +26,6 @@ export default function Intro() {
             color="displayColor"
             letterSpacing={{ sm: '-1.2px', md: '-1.8px' }}
             position="relative"
-            zIndex={1}
           >
             Rushil Patel.
           </Heading>

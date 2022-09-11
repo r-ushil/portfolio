@@ -1,3 +1,4 @@
+import { Box, Flex } from '@chakra-ui/react'
 import { OrbitControls } from '@react-three/drei'
 import { Canvas, useLoader } from '@react-three/fiber'
 import { Suspense } from 'react'
@@ -9,7 +10,9 @@ import Mustang from './models/mustang'
 
 export default function IntroScene() {
     return (
-        <div style={{ width: "35vw", height: "60vh" }}>
+        <Flex alignItems='center' justifyContent="center">
+
+            <Box w='35vw' h='60vh'>
             <Canvas camera={{ fov: 45, position: [4, 4, 6] }}>
                 <ambientLight intensity={0.1} />
                 <pointLight position={[0, 10, 0]} intensity={1} />
@@ -21,7 +24,9 @@ export default function IntroScene() {
                 <Laptop/>
                 <OrbitControls />
             </Canvas>
-        </div>
+            </Box>
+
+        </Flex>
     )
   }
   
