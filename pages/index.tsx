@@ -15,7 +15,7 @@ const Home: NextPage = () => {
         justifyContent="center"
         alignItems="flex-start"
         px={{ base: '5vw', md: '7.5vw' }}
-        mt={{ base: '17.5vh', md: '22.5vh' }}
+        mt={{ base: '12.5vh', md: '22.5vh' }}
       >
         <Wrap spacing="100px" justify="center" align="center">
 
