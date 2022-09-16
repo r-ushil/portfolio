@@ -16,7 +16,7 @@ export default function Container({children}: Props) {
         {children}
       </Flex>
       <Stack alignItems="center" mt={10} mb={5}>
-        <Text textAlign="center" fontSize="sm" color="displayColor">
+        <Text textAlign="center" fontSize={["0.5em", "sm"]} color="displayColor">
           Designed and Developed by Rushil Patel.
           <br />
           Built with{' '}
