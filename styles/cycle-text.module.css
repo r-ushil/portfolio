@@ -1,29 +1,62 @@
-.cycle_text {
-    color: #3CCF91;
-    position: absolute;
-    vertical-align: middle;
-    margin-top: 0.175px;
-  }
-  
-.cycle_text::before {
-    content: "";
-    width: 100%;
-    height: 2px;
-    background: #6d6de6;
-    position: absolute;
-    bottom: 0px;
-    z-index: -1;
-    opacity: 1;
-    animation: fill-in 3s cubic-bezier(0.76, 0, 0.24, 1) infinite;
+@media all and (min-width: 48em) {
+    /* Apply first set of CSS rules */
+    .cycle_text {
+        color: #3CCF91;
+        position: absolute;
+        vertical-align: middle;
+      }
+      
+    .cycle_text::before {
+        content: "";
+        width: 100%;
+        height: 1px;
+        background: #6d6de6;
+        position: absolute;
+        bottom: 0px;
+        opacity: 1;
+        animation: fill-in 3s cubic-bezier(0.76, 0, 0.24, 1) infinite;
+    }
+    
+    @keyframes fill-in {
+        from {
+            width: 0%;
+            opacity: 0;
+        }
+        to {
+            width: 100%;
+            opacity: 1;
+        }
+    }
+
 }
 
-@keyframes fill-in {
-    from {
-        width: 0%;
-        opacity: 0;
-    }
-    to {
+@media not all and (min-width: 200px) {
+    /* Apply second set of CSS rules */
+    .cycle_text {
+        color: #3CCF91;
+        position: absolute;
+        vertical-align: middle;
+      }
+      
+    .cycle_text::before {
+        content: "";
         width: 100%;
+        height: 1px;
+        background: #6d6de6;
+        position: absolute;
+        bottom: 0px;
         opacity: 1;
+        animation: fill-in 3s cubic-bezier(0.76, 0, 0.24, 1) infinite;
+    }
+    
+    @keyframes fill-in {
+        from {
+            width: 0%;
+            opacity: 0;
+        }
+        to {
+            width: 100%;
+            opacity: 0;
+        }
     }
 }
