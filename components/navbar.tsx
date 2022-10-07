@@ -23,7 +23,6 @@ export default function Navbar() {
         style={{background: "black"}}
       >
         <Flex
-          as="nav"
           flexDirection="row"
           justifyContent="space-between"
           alignItems="center"
@@ -49,14 +48,9 @@ export default function Navbar() {
                   Home
               </Button>
               </NextLink>
-              <NextLink href="/projects" passHref>
+              <NextLink href="/Rushil_Patel_CV_Aug_2022.pdf" passHref>
               <Button as="a" variant="ghost" p="4" ml="3vw" fontSize="16px">
-                  Projects
-              </Button>
-              </NextLink>
-              <NextLink href="/blog" passHref>
-              <Button as="a" variant="ghost" p="4" ml="3vw" fontSize="16px">
-                  Blog
+                  CV
               </Button>
               </NextLink>{' '}
           </Box>
